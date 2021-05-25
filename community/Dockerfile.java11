@@ -3,7 +3,7 @@
 # Copyright (c) 2015 Oracle and/or its affiliates. All rights reserved.
 #
 
-FROM arm64v8/oraclelinux:7-slim
+FROM oraclelinux:7-slim
 
 # Note: If you are behind a web proxy, set the build variables for the build:
 #       E.g.:  docker build --build-arg "https_proxy=..." --build-arg "http_proxy=..." --build-arg "no_proxy=..." ...
@@ -14,7 +14,6 @@ LABEL \
     org.opencontainers.image.authors='GraalVM Sustaining Team <graalvm-sustaining_ww_grp@oracle.com>' \
     org.opencontainers.image.description='GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++.'
 
-ENV PATH="$PATH:/usr/sue/sbin:/usr/sue/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 RUN uname -m
 
 RUN yum update -y oraclelinux-release-el7 \
