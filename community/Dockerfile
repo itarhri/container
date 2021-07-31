@@ -3,7 +3,7 @@
 # Copyright (c) 2015 Oracle and/or its affiliates. All rights reserved.
 #
 
-# Base image
+# Change base image
 FROM oraclelinux:7-slim
 
 # Note: If you are behind a web proxy, set the build variables for the build:
